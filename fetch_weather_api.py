@@ -28,7 +28,7 @@ def build_hourly_weather_dataset():
             f"https://archive-api.open-meteo.com/v1/archive?"
             f"latitude={lat}&longitude={lon}"
             f"&start_date=2015-01-01&end_date=2015-12-31"
-            f"&hourly=precipitation,snowfall" # Changed to hourly
+            f"&hourly=precipitation,snowfall,wind_speed_10m,wind_gusts_10m,cloud_cover_low"
             f"&timezone=America/New_York"
         )
         
@@ -42,7 +42,10 @@ def build_hourly_weather_dataset():
                 'AIRPORT_CODE': airport_code,
                 'TIME': pd.to_datetime(data['hourly']['time']),
                 'PRECIPITATION': data['hourly']['precipitation'],
-                'SNOWFALL': data['hourly']['snowfall']
+                'SNOWFALL': data['hourly']['snowfall'],
+                'WIND_SPEED': data['hourly']['wind_speed_10m'],
+                'WIND_GUSTS': data['hourly']['wind_gusts_10m'],
+                'CLOUD_COVER_LOW': data['hourly']['cloud_cover_low']
             })
             
             # Extract Month, Day, and Hour so we can easily join it to the flight dataset later
