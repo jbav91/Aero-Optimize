@@ -3,3 +3,4 @@ gcp-key.json
 .env
 *.joblib
 *.txt
+*.pyc
