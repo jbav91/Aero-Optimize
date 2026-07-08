@@ -2,3 +2,4 @@ gcp-key.json
 /dataset
 .env
 *.joblib
+*.txt
