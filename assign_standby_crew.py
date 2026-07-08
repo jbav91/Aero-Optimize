@@ -52,5 +52,8 @@ def assign_standby_crew(flight_duration_hours, crew_pool):
         'Total_Hourly_Cost': total_cost
     }
 
+
 # Example: XGBoost predicts a delay. The flight routing takes 7 hours.
-print(assign_standby_crew(flight_duration_hours=7, crew_pool=crew_df))
+if __name__ == "__main__":
+    result = assign_standby_crew(flight_duration_hours=7, crew_pool=crew_df)
+    print(result)
