@@ -10,7 +10,7 @@ standby_crew_data = {
 }
 crew_df = pd.DataFrame(standby_crew_data)
 
-def assign_standby_crew(flight_duration_hours, crew_pool):
+def assign_standby_crew(flight_duration_hours=7, crew_pool=crew_df):
     """
     Calculates the cheapest legal crew combination for a delayed flight.
     """
@@ -55,5 +55,5 @@ def assign_standby_crew(flight_duration_hours, crew_pool):
 
 # Example: XGBoost predicts a delay. The flight routing takes 7 hours.
 if __name__ == "__main__":
-    result = assign_standby_crew(flight_duration_hours=7, crew_pool=crew_df)
+    result = assign_standby_crew()
     print(result)
