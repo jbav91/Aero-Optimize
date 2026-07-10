@@ -7,3 +7,5 @@ gcp-key.json
 /dataset/raw
 /dataset/modified
 /dataset/queries
+
+!/trained_models/model_xgboost_v08_v01.joblib
