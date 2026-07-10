@@ -16,7 +16,7 @@ app = FastAPI(title="Flight Optimization & Crew API", version="1.0")
 # ---------------------------------------------------------
 print("Booting up: Loading XGBoost Champion Model...")
 try:
-    model = joblib.load('./trained_models/model_xgboost_v08_v01.joblib')
+    model = joblib.load('model_xgboost_v08_v01.joblib')
     print("Success: Brain loaded into memory.")
 except FileNotFoundError:
     print("Error: Model file not found. Make sure 'xgboost_delay_model_v06.joblib' is in this directory.")
