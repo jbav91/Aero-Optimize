@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Import your Day 3 optimization function
-from backend.assign_standby_crew import assign_standby_crew
+from assign_standby_crew import assign_standby_crew
 
 # ---------------------------------------------------------
 # 1. INITIALIZE THE API
