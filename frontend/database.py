@@ -14,7 +14,8 @@ def init_connection():
     db_port = os.getenv("DB_PORT")
     db_name = os.getenv("DB_NAME")
     
-    db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}?sslmode=require"
+    # Updated URL: Added +pg8000 and ?sslmode=require
+    db_url = f"postgresql+pg8000://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}?sslmode=require"
     return create_engine(db_url)
 
 @st.cache_data 
