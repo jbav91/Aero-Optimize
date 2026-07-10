@@ -11,3 +11,4 @@ versions.txt
 /dataset/queries
 
 !/trained_models/model_xgboost_v08_v01.joblib
+!/backend/model_xgboost_v08_v01.joblib
