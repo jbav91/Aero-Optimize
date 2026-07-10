@@ -17,7 +17,7 @@ db_name = os.getenv("DB_NAME")
 db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 engine = create_engine(db_url)
 
-API_URL = "http://127.0.0.1:8000/api/check_flight"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/api/check_flight")
 
 def run_simulation():
     batch_size = 10
