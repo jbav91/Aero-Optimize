@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 
-# Import your Day 3 optimization function
+# Import your Day 3 optimization functionn
 from assign_standby_crew import assign_standby_crew
 
 # ---------------------------------------------------------
