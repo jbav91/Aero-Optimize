@@ -2,7 +2,8 @@ gcp-key.json
 .env
 .env.prod
 *.joblib
-*.txt
+readme.txt
+versions.txt
 *.pyc
 
 /dataset/raw
