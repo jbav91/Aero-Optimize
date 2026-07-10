@@ -3,5 +3,5 @@ pandas
 requests
 pydeck
 SQLAlchemy
-psycopg2
+pg8000 #psycopg2
 python-dotenv
