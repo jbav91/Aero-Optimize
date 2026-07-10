@@ -1,6 +1,9 @@
 gcp-key.json
-/dataset
 .env
 *.joblib
 *.txt
 *.pyc
+
+/dataset/raw
+/dataset/modified
+/dataset/queries
