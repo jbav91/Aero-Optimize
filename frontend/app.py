@@ -4,6 +4,15 @@ from map_component import render_flight_map
 from sidebar_component import render_sidebar
 from route_component import render_route_selector 
 from api_component import execute_and_display_results # <-- Import the new component
+import os
+from dotenv import load_dotenv
+
+# --- ENVIROMENT VARIABLES ---
+load_dotenv()
+
+# Safely fetch the API URL. 
+# The second parameter is a "fallback" default just in case it can't find the variable.
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/api/check_flight")
 
 # --- DATA INITIALIZATION ---
 airlines_dictionary = fetch_airlines()
@@ -13,7 +22,6 @@ airports_dictionary = dict(zip(airports_df['ID'], airports_df['AIRPORT']))
 
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Aero-Optimize AI", page_icon="✈️", layout="wide")
-API_URL = "http://127.0.0.1:8000/api/check_flight"
 
 st.title("✈️ Aero-Optimize: Smart Dispatch System")
 st.markdown("Predict flight delays and mathematically optimize standby crew assignments in real-time.")
