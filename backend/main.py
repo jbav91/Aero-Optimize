@@ -19,7 +19,7 @@ try:
     model = joblib.load('model_xgboost_v08_v01.joblib')
     print("Success: Brain loaded into memory.")
 except FileNotFoundError:
-    print("Error: Model file not found. Make sure 'xgboost_delay_model_v06.joblib' is in this directory.")
+    print("Error: Model file not found. Make sure the Model is in this directory.")
     model = None
 
 # ---------------------------------------------------------
